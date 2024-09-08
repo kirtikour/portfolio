@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flip Card Game</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heading">FLIP CARD GAME</div>
+      <p class="move">MOVES : <span class="moves">12</span></p>
+      <button onclick="restart()" id="restart">RESTART</button>
+
+      <button id="pauseButton" onclick="togglePause()">Pause</button>
+
+      <div class="game-container">
+        <div class="card-container">
+          <!--  1 image  -->
+
+          <div class="cards" id="1" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://cdn2.hubspot.net/hubfs/53/image8-2.jpg"
+                  alt="Google"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="cards" id="2" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://img.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712880000&semt=ais"
+                  alt="Insta"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 iage -->
+
+          <div class="cards" id="3" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://cdn2.hubspot.net/hubfs/53/image8-2.jpg"
+                  alt="Google"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 image -->
+
+          <div class="cards" id="4" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://img.freepik.com/premium-photo/facebook-logo-round-button-icon-with-empty-background-3d_272306-348.jpg"
+                  alt="Facebook"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!--  5 image -->
+
+          <div class="cards" id="5" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png"
+                  alt="Twitter"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!--  6 image -->
+
+          <div class="cards" id="6" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://img.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712880000&semt=ais"
+                  alt="Insta"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!--  7 image  -->
+
+          <div class="cards" id="7" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://img.freepik.com/premium-photo/facebook-logo-round-button-icon-with-empty-background-3d_272306-348.jpg"
+                  alt="Facebook"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 image -->
+
+          <div class="cards" id="8" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/020/336/373/original/netflix-logo-netflix-icon-free-free-vector.jpg"
+                  alt="Netflix"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 9 image -->
+          <div class="cards" id="9" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png"
+                  alt="Twitter"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 10 image -->
+          <div class="cards" id="10" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/020/336/373/original/netflix-logo-netflix-icon-free-free-vector.jpg"
+                  alt="Netflix"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 11 image -->
+          <div class="cards" id="11" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://img.freepik.com/premium-vector/whatsapp-icon-concept_23-2147897840.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1712707200&semt=ais"
+                  alt="Whatsapp"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+          <!--  12 image -->
+
+          <div class="cards" id="11" onclick="rotate(this)">
+            <div class="content">
+              <div class="front">?</div>
+              <div class="back">
+                <img
+                  src="https://img.freepik.com/premium-vector/whatsapp-icon-concept_23-2147897840.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1712707200&semt=ais"
+                  alt="Whatsapp"
+                  class="img-card hidden"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
