@@ -6,6 +6,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- 1. Add AOS CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <title>Kirti Kour - Full Stack Developer</title>
     <style>
@@ -1740,6 +1742,44 @@
           top: -32px;
         }
       }
+      /* CTA Buttons */
+      .ben-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: 30px;
+        padding: 13px 32px;
+        text-decoration: none;
+        transition: all 0.22s;
+        box-shadow: 0 2px 12px rgba(255,107,53,0.08);
+        margin-bottom: 0.2rem;
+        border: none;
+        cursor: pointer;
+        position: relative;
+      }
+      .ben-cta-btn:hover {
+        transform: translateY(-3px) scale(1.04);
+        box-shadow: 0 8px 24px rgba(255,107,53,0.18);
+        background: #ff6b35 !important;
+        color: #fff !important;
+        border-color: #ff6b35 !important;
+      }
+      .ben-cta-btn i {
+        font-size: 1.2em;
+      }
+      @media (max-width: 600px) {
+        .ben-cta-btn {
+          font-size: 0.98rem;
+          padding: 10px 18px;
+        }
+      }
+      /* Animated Scroll Indicator */
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(12px); }
+      }
     </style>
   </head>
   <body>
@@ -2591,21 +2631,33 @@
     <!-- Home Section (Wave fix) -->
     <section id="home" class="hero ben-home" style="background: transparent;">
       <div class="ben-home-content" style="padding-top: 120px;">
-        <div class="ben-profile-pic-container">
+        <div class="ben-profile-pic-container" data-aos="fade-down" data-aos-duration="1000">
           <div class="ben-pic-relative">
             <img src="images/kirtikour.jpeg" alt="Kirti Kour" class="ben-profile-pic" />
             <span class="ben-wave-emoji">👋</span>
           </div>
         </div>
-        <div class="ben-description">
-          Hello, I'm <span class="ben-highlight">Kirti Kour</span>.<br />
-          I'm a <span class="ben-highlight">Full Stack Developer & CS Student</span><br />
-          at Sukkur IBA University with expertise in<br />
-          <span class="ben-orange">MERN stack development</span> and <span class="ben-orange">AI/ML</span>.<br />
-          Currently serving as an Executive Member of the Tech Club<br />
-          and gaining professional experience as a Web Development Intern.
+        <!-- 2-line bold intro with highlight -->
+        <div class="ben-heading" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          Hi, I'm <span class="ben-highlight">Kirti Kour</span><br />
+          <span class="ben-highlight">Full Stack Developer</span>
         </div>
-        <div class="ben-social-btns">
+        <!-- Tagline -->
+        <div class="ben-tagline" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" style="font-size:1.25rem;color:#ff6b35;font-weight:600;margin:0.5rem 0 1.2rem 0;">
+          Building seamless digital experiences with code & creativity.
+        </div>
+        <!-- Restored Description -->
+        <div class="ben-description" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+          Hello, I'm <span class="ben-highlight">Kirti Kour</span>.<br />
+          I'm a <span class="ben-highlight">Full Stack Developer</span> and Computer Science student<br />
+          at Sukkur IBA University, with expertise in web technologies.<br />
+          Currently, I serve as an Executive Member of the Tech Club<br />
+          and am gaining professional experience as a Web Development Intern.
+        </div>
+        <!-- Modern CTA Buttons -->
+        <!-- REMOVE the .ben-cta-btns div and its contents -->
+        <!-- Social Buttons (keep as is, but add AOS) -->
+        <div class="ben-social-btns" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
           <a href="mailto:kirtikour.bscsf22@iba-suk.edu.pk" class="ben-social-btn icon-tooltip" title="Contact Me">
             <i class="fas fa-envelope"></i>
             <span class="btn-tooltip">Contact Me</span>
@@ -2615,182 +2667,101 @@
             <span class="btn-tooltip">Download CV</span>
           </a>
         </div>
+        <!-- 3. Animated Scroll Indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200" style="margin-top:2.5rem;display:flex;justify-content:center;">
+          <span style="display:inline-block;animation:bounce 1.5s infinite;">
+            <i class="fas fa-angle-double-down" style="font-size:2.2rem;color:#ff6b35;"></i>
+          </span>
+        </div>
       </div>
     </section>
 
 
 
     <!-- Skills Section -->
-    <div id="skills" class="skills-section">
-      <h1>My Skills</h1>
+    <div id="skills" class="skills-section" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <h1 data-aos="fade-right" data-aos-delay="200" data-aos-duration="900">My Skills</h1>
 
-      <div class="skills-category">
-        <div class="category-title">Programming Languages</div>
+      <div class="skills-category" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+        <div class="category-title" data-aos="fade-right" data-aos-delay="350">Programming Languages</div>
         <div class="skills-grid">
-          <div class="skill-item">
-            <i class="fab fa-js-square skill-icon js-icon"></i>
-            <span>JavaScript</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-python skill-icon python-icon"></i>
-            <span>Python</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-java skill-icon java-icon"></i>
-            <span>Java</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-code skill-icon cpp-icon"></i>
-            <span>C++</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-html5 skill-icon html-icon"></i>
-            <span>HTML</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-css3-alt skill-icon css-icon"></i>
-            <span>CSS</span>
-          </div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-js-square skill-icon js-icon"></i><span>JavaScript</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="420"><i class="fab fa-python skill-icon python-icon"></i><span>Python</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="440"><i class="fab fa-java skill-icon java-icon"></i><span>Java</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="460"><i class="fas fa-code skill-icon cpp-icon"></i><span>C++</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="480"><i class="fab fa-html5 skill-icon html-icon"></i><span>HTML</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-css3-alt skill-icon css-icon"></i><span>CSS</span></div>
         </div>
       </div>
 
-      <div class="skills-category">
-        <div class="category-title">Frameworks &amp; Libraries</div>
+      <div class="skills-category" data-aos="fade-up" data-aos-delay="350" data-aos-duration="900">
+        <div class="category-title" data-aos="fade-right" data-aos-delay="400">Frameworks &amp; Libraries</div>
         <div class="skills-grid">
-          <div class="skill-item">
-            <i class="fab fa-react skill-icon react-icon"></i>
-            <span>React.js</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-node-js skill-icon node-icon"></i>
-            <span>Node.js</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-server skill-icon express-icon"></i>
-            <span>Express.js</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-python skill-icon django-icon"></i>
-            <span>Django</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-bootstrap skill-icon bootstrap-icon"></i>
-            <span>Bootstrap</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-wind skill-icon tailwind-icon"></i>
-            <span>Tailwind CSS</span>
-          </div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="420"><i class="fab fa-react skill-icon react-icon"></i><span>React.js</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="440"><i class="fab fa-node-js skill-icon node-icon"></i><span>Node.js</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="460"><i class="fas fa-server skill-icon express-icon"></i><span>Express.js</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="480"><i class="fab fa-python skill-icon django-icon"></i><span>Django</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-bootstrap skill-icon bootstrap-icon"></i><span>Bootstrap</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="520"><i class="fas fa-wind skill-icon tailwind-icon"></i><span>Tailwind CSS</span></div>
         </div>
       </div>
 
-      <div class="skills-category">
-        <div class="category-title">AI/ML &amp; Data Science</div>
+      <div class="skills-category" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+        <div class="category-title" data-aos="fade-right" data-aos-delay="450">AI/ML &amp; Data Science</div>
         <div class="skills-grid">
-          <div class="skill-item">
-            <i class="fas fa-brain skill-icon tensorflow-icon"></i>
-            <span>TensorFlow</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-robot skill-icon ai-icon"></i>
-            <span>Keras</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-chart-line skill-icon ai-icon"></i>
-            <span>NumPy</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-table skill-icon ai-icon"></i>
-            <span>Pandas</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-eye skill-icon ai-icon"></i>
-            <span>OpenCV</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-microscope skill-icon ai-icon"></i>
-            <span>Scikit-learn</span>
-          </div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="470"><i class="fas fa-brain skill-icon tensorflow-icon"></i><span>TensorFlow</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="490"><i class="fas fa-robot skill-icon ai-icon"></i><span>Keras</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="510"><i class="fas fa-chart-line skill-icon ai-icon"></i><span>NumPy</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="530"><i class="fas fa-table skill-icon ai-icon"></i><span>Pandas</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="550"><i class="fas fa-eye skill-icon ai-icon"></i><span>OpenCV</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="570"><i class="fas fa-microscope skill-icon ai-icon"></i><span>Scikit-learn</span></div>
         </div>
       </div>
 
-      <div class="skills-category">
-        <div class="category-title">Tools &amp; Databases</div>
+      <div class="skills-category" data-aos="fade-up" data-aos-delay="450" data-aos-duration="900">
+        <div class="category-title" data-aos="fade-right" data-aos-delay="500">Tools &amp; Databases</div>
         <div class="skills-grid">
-          <div class="skill-item">
-            <i class="fas fa-leaf skill-icon mongo-icon"></i>
-            <span>MongoDB</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-leaf skill-icon mongo-icon"></i>
-            <span>jupyter Notebook</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-database skill-icon mysql-icon"></i>
-            <span>MySQL</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-git-alt skill-icon git-icon"></i>
-            <span>Git/GitHub</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-google skill-icon google-icon"></i>
-            <span>Google Collab</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-code skill-icon vscode-icon"></i>
-            <span>VS Code</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-wordpress skill-icon wordpress-icon"></i>
-            <span>WordPress</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-coffee skill-icon tool-icon"></i>
-            <span>NetBeans</span>
-          </div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="520"><i class="fas fa-leaf skill-icon mongo-icon"></i><span>MongoDB</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="540"><i class="fas fa-leaf skill-icon mongo-icon"></i><span>jupyter Notebook</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="560"><i class="fas fa-database skill-icon mysql-icon"></i><span>MySQL</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="580"><i class="fab fa-git-alt skill-icon git-icon"></i><span>Git/GitHub</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="600"><i class="fab fa-google skill-icon google-icon"></i><span>Google Collab</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="620"><i class="fas fa-code skill-icon vscode-icon"></i><span>VS Code</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="640"><i class="fab fa-wordpress skill-icon wordpress-icon"></i><span>WordPress</span></div>
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="660"><i class="fas fa-coffee skill-icon tool-icon"></i><span>NetBeans</span></div>
         </div>
       </div>
     </div>
 
     <!-- Education Section -->
-    <div id="education" class="education-section">
-      <h1>Education</h1>
-      <div class="education-card">
-        <div class="university-logo">
+    <div id="education" class="education-section" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <h1 data-aos="fade-right" data-aos-delay="200">Education</h1>
+      <div class="education-card" data-aos="zoom-in-up" data-aos-delay="300">
+        <div class="university-logo" data-aos="zoom-in" data-aos-delay="350">
           <i class="fas fa-graduation-cap"></i>
         </div>
-        <h2 class="degree-title">Bachelor of Science in Computer Science</h2>
-        <h3 class="university-name">Sukkur IBA University</h3>
-        <div class="education-details">
-          <div class="detail-item">
-            <i class="fas fa-calendar-alt detail-icon"></i>
-            <span>2022 - Present</span>
-          </div>
-          <div class="detail-item">
-            <i class="fas fa-map-marker-alt detail-icon"></i>
-            <span>Sukkur, Pakistan</span>
-          </div>
-          <div class="detail-item">
-            <i class="fas fa-book detail-icon"></i>
-            <span>Computer Science</span>
-          </div>
+        <h2 class="degree-title" data-aos="fade-up" data-aos-delay="400">Bachelor of Science in Computer Science</h2>
+        <h3 class="university-name" data-aos="fade-up" data-aos-delay="450">Sukkur IBA University</h3>
+        <div class="education-details" data-aos="fade-up" data-aos-delay="500">
+          <div class="detail-item"><i class="fas fa-calendar-alt detail-icon"></i><span>2022 - Present</span></div>
+          <div class="detail-item"><i class="fas fa-map-marker-alt detail-icon"></i><span>Sukkur, Pakistan</span></div>
+          <div class="detail-item"><i class="fas fa-book detail-icon"></i><span>Computer Science</span></div>
         </div>
-        <div class="cgpa-badge">
+        <div class="cgpa-badge" data-aos="fade-up" data-aos-delay="550">
           <i class="fas fa-star"></i> CGPA: 3.68/4.00
         </div>
       </div>
     </div>
 
     <!-- Certification Section -->
-    <div id="certifications" class="certification-section">
-      <h1>Certifications</h1>
+    <div id="certifications" class="certification-section" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <h1 data-aos="fade-right" data-aos-delay="200">Certifications</h1>
       <div class="certifications-timeline">
         <!-- Web Development Certification -->
-        <div class="certification-item">
+        <div class="certification-item" data-aos="fade-left" data-aos-delay="300">
           <div class="certification-content">
             <div class="certification-header">
-              <div class="certification-icon">
+              <div class="certification-icon" data-aos="zoom-in" data-aos-delay="350">
                 <i class="fas fa-code"></i>
               </div>
               <div class="certification-info">
@@ -2799,18 +2770,15 @@
                 <p class="certification-date">February 2024</p>
               </div>
             </div>
-            <p class="certification-description">
-              Comprehensive web development course covering HTML, CSS, and JavaScript. Learned front-end and back-end development concepts, web application ecosystem, and full-stack development principles.
-            </p>
+            <p class="certification-description">Comprehensive web development course covering HTML, CSS, and JavaScript. Learned front-end and back-end development concepts, web application ecosystem, and full-stack development principles.</p>
             <a href="https://www.coursera.org/account/accomplishments/verify/XHEUTHHTYKWN" target="_blank" class="certification-link">View Certificate</a>
           </div>
         </div>
-
         <!-- AI for Everyone Certification -->
-        <div class="certification-item">
+        <div class="certification-item" data-aos="fade-right" data-aos-delay="350">
           <div class="certification-content">
             <div class="certification-header">
-              <div class="certification-icon">
+              <div class="certification-icon" data-aos="zoom-in" data-aos-delay="400">
                 <i class="fas fa-brain"></i>
               </div>
               <div class="certification-info">
@@ -2819,18 +2787,15 @@
                 <p class="certification-date">2024</p>
               </div>
             </div>
-            <p class="certification-description">
-              Comprehensive understanding of artificial intelligence concepts, machine learning fundamentals, and practical applications of AI in various industries and technologies.
-            </p>
+            <p class="certification-description">Comprehensive understanding of artificial intelligence concepts, machine learning fundamentals, and practical applications of AI in various industries and technologies.</p>
             <a href="https://www.coursera.org/learn/ai-for-everyone/home/week/1" target="_blank" class="certification-link">View Certificate</a>
           </div>
         </div>
-
         <!-- React Basics Certification -->
-        <div class="certification-item">
+        <div class="certification-item" data-aos="fade-left" data-aos-delay="400">
           <div class="certification-content">
             <div class="certification-header">
-              <div class="certification-icon">
+              <div class="certification-icon" data-aos="zoom-in" data-aos-delay="450">
                 <i class="fab fa-react"></i>
               </div>
               <div class="certification-info">
@@ -2839,18 +2804,15 @@
                 <p class="certification-date">2024</p>
               </div>
             </div>
-            <p class="certification-description">
-              Fundamental React.js development skills including components, props, state management, and modern React patterns. Built interactive user interfaces using React ecosystem.
-            </p>
+            <p class="certification-description">Fundamental React.js development skills including components, props, state management, and modern React patterns. Built interactive user interfaces using React ecosystem.</p>
             <a href="https://www.coursera.org/learn/react-basics/home/module/4" target="_blank" class="certification-link">View Certificate</a>
           </div>
         </div>
-
         <!-- JavaScript Programming Certification -->
-        <div class="certification-item">
+        <div class="certification-item" data-aos="fade-right" data-aos-delay="450">
           <div class="certification-content">
             <div class="certification-header">
-              <div class="certification-icon">
+              <div class="certification-icon" data-aos="zoom-in" data-aos-delay="500">
                 <i class="fab fa-js-square"></i>
               </div>
               <div class="certification-info">
@@ -2859,18 +2821,15 @@
                 <p class="certification-date">2024</p>
               </div>
             </div>
-            <p class="certification-description">
-              Advanced JavaScript programming skills including ES6+ features, asynchronous programming, DOM manipulation, and modern JavaScript development practices.
-            </p>
+            <p class="certification-description">Advanced JavaScript programming skills including ES6+ features, asynchronous programming, DOM manipulation, and modern JavaScript development practices.</p>
             <a href="https://www.coursera.org/learn/programming-with-javascript/home/module/1" target="_blank" class="certification-link">View Certificate</a>
           </div>
         </div>
-
         <!-- Additional Certifications from LinkedIn -->
-        <div class="certification-item">
+        <div class="certification-item" data-aos="fade-left" data-aos-delay="500">
           <div class="certification-content">
             <div class="certification-header">
-              <div class="certification-icon">
+              <div class="certification-icon" data-aos="zoom-in" data-aos-delay="550">
                 <i class="fab fa-linkedin"></i>
               </div>
               <div class="certification-info">
@@ -2879,9 +2838,7 @@
                 <p class="certification-date">2024</p>
               </div>
             </div>
-            <p class="certification-description">
-              Multiple professional certifications in web development, programming languages, and software development tools. View my complete certification portfolio on LinkedIn.
-            </p>
+            <p class="certification-description">Multiple professional certifications in web development, programming languages, and software development tools. View my complete certification portfolio on LinkedIn.</p>
             <a href="https://linkedin.com/in/kirtikour" target="_blank" class="certification-link">View on LinkedIn</a>
           </div>
         </div>
@@ -2889,337 +2846,114 @@
     </div>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
       <div class="container">
-        <h1 class="section-title">My Projects</h1>
+        <h1 class="section-title" data-aos="fade-right" data-aos-delay="200">My Projects</h1>
 
         <div class="projects-grid">
           <!-- HEALR Project -->
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up" data-aos-delay="300">
             <div class="project-header">
               <div class="project-info">
                 <div class="project-category">Healthcare Platform</div>
                 <h2 class="project-title">HEALR</h2>
-                <p class="project-description">
-                  A comprehensive web-based platform for booking doctor
-                  appointments, managing patient-doctor interactions, and
-                  offering virtual consultations. Features real-time
-                  communication and secure data management.
-                </p>
+                <p class="project-description">A comprehensive web-based platform for booking doctor appointments, managing patient-doctor interactions, and offering virtual consultations. Features real-time communication and secure data management.</p>
               </div>
               <div>
-                <img
-                  src="images/HEALR.png"
-                  alt="React"
-                  class="project-image healr-image"
-                />
+                <img src="images/HEALR.png" alt="React" class="project-image healr-image" />
               </div>
             </div>
             <div class="project-footer">
               <div class="tech-stack">
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                    alt="React"
-                    class="tech-logo"
-                  />
-                  <span>React.js</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                    alt="Express"
-                    class="tech-logo"
-                  />
-                  <span>Express.js</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                    alt="Node.js"
-                    class="tech-logo"
-                  />
-                  <span>Node.js</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                    alt="MongoDB"
-                    class="tech-logo"
-                  />
-                  <span>MongoDB</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                    alt="Bootstrap"
-                    class="tech-logo"
-                  />
-                  <span>Bootstrap</span>
-                </div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-logo" /><span>React.js</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="tech-logo" /><span>Express.js</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-logo" /><span>Node.js</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-logo" /><span>MongoDB</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-logo" /><span>Bootstrap</span></div>
               </div>
               <div class="project-actions">
-                <a href="#" class="action-btn demo-btn">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    ></path>
-                  </svg>
-                  Demo
-                </a>
-                <a href="#" class="action-btn github-btn">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                    ></path>
-                  </svg>
-                  GitHub
-                </a>
+                <a href="#" class="action-btn demo-btn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>Demo</a>
+                <a href="#" class="action-btn github-btn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>GitHub</a>
               </div>
             </div>
           </div>
 
           <!-- AI Recognition Project -->
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up" data-aos-delay="350">
             <div class="project-header">
               <div class="project-info">
                 <div class="project-category">AI Recognition</div>
                 <h2 class="project-title">Handwritten Notes Recognition</h2>
-                <p class="project-description">
-                  AI-powered system that recognizes English handwritten
-                  characters using Convolutional Neural Networks. Achieved high
-                  accuracy in character recognition with robust preprocessing
-                  and model optimization.
-                </p>
+                <p class="project-description">AI-powered system that recognizes English handwritten characters using Convolutional Neural Networks. Achieved high accuracy in character recognition with robust preprocessing and model optimization.</p>
               </div>
               <div>
-                <img
-                  src="images/AI.webp"
-                  alt="React"
-                  class="project-image healr-image"
-                />
+                <img src="images/AI.webp" alt="React" class="project-image healr-image" />
               </div>
             </div>
             <div class="project-footer">
               <div class="tech-stack">
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    alt="Python"
-                    class="tech-logo"
-                  />
-                  <span>Python</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
-                    alt="TensorFlow"
-                    class="tech-logo"
-                  />
-                  <span>TensorFlow</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"
-                    alt="Keras"
-                    class="tech-logo"
-                  />
-                  <span>Keras</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
-                    alt="OpenCV"
-                    class="tech-logo"
-                  />
-                  <span>OpenCV</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
-                    alt="NumPy"
-                    class="tech-logo"
-                  />
-                  <span>NumPy</span>
-                </div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" /><span>Python</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-logo" /><span>TensorFlow</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" class="tech-logo" /><span>Keras</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" class="tech-logo" /><span>OpenCV</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="tech-logo" /><span>NumPy</span></div>
               </div>
               <div class="project-actions">
-                <a href="#" class="action-btn demo-btn">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    ></path>
-                  </svg>
-                  Demo
-                </a>
-                <a href="#" class="action-btn github-btn">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                    ></path>
-                  </svg>
-                  GitHub
-                </a>
+                <a href="#" class="action-btn demo-btn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>Demo</a>
+                <a href="#" class="action-btn github-btn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>GitHub</a>
               </div>
             </div>
           </div>
 
           <!-- Cookify Project -->
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up" data-aos-delay="400">
             <div class="project-header">
               <div class="project-info">
                 <div class="project-category">Recipe Manager</div>
                 <h2 class="project-title">Cookify</h2>
-                <p class="project-description">
-                  Full-stack recipe management application with category
-                  filtering, search functionality, and dynamic recipe rendering.
-                  Features a clean, responsive UI for enhanced user experience.
-                </p>
+                <p class="project-description">Full-stack recipe management application with category filtering, search functionality, and dynamic recipe rendering. Features a clean, responsive UI for enhanced user experience.</p>
               </div>
               <div>
-                <img
-                  src="images/cookify.jpg"
-                  alt="React"
-                  class="project-image cookify-image"
-                />
+                <img src="images/cookify.jpg" alt="React" class="project-image cookify-image" />
               </div>
             </div>
             <div class="project-footer">
               <div class="tech-stack">
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                    alt="React"
-                    class="tech-logo"
-                  />
-                  <span>React.js</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-                    alt="Django"
-                    class="tech-logo"
-                  />
-                  <span>Django</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                    alt="HTML"
-                    class="tech-logo"
-                  />
-                  <span>HTML</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                    alt="Bootstrap"
-                    class="tech-logo"
-                  />
-                  <span>Bootstrap</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    alt="Python"
-                    class="tech-logo"
-                  />
-                  <span>Python</span>
-                </div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-logo" /><span>React.js</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="tech-logo" /><span>Django</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="tech-logo" /><span>HTML</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-logo" /><span>Bootstrap</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" /><span>Python</span></div>
               </div>
               <div class="project-actions">
-                <a href="#" class="action-btn demo-btn">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    ></path>
-                  </svg>
-                  Demo
-                </a>
-                <a href="#" class="action-btn github-btn">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                    ></path>
-                  </svg>
-                  GitHub
-                </a>
+                <a href="#" class="action-btn demo-btn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>Demo</a>
+                <a href="#" class="action-btn github-btn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>GitHub</a>
               </div>
             </div>
           </div>
 
           <!-- CMS Project -->
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up" data-aos-delay="450">
             <div class="project-header">
               <div class="project-info">
                 <div class="project-category">CMS Desktop</div>
                 <h2 class="project-title">Content Management System</h2>
-                <p class="project-description">
-                  Desktop-based CMS built with Java featuring an intuitive UI
-                  and robust database connectivity. Includes CRUD operations,
-                  user authentication, and efficient data management.
-                </p>
+                <p class="project-description">Desktop-based CMS built with Java featuring an intuitive UI and robust database connectivity. Includes CRUD operations, user authentication, and efficient data management.</p>
               </div>
               <div>
-                <img
-                  src="images/cms.jpg"
-                  alt="React"
-                  class="project-image cms-image"
-                />
+                <img src="images/cms.jpg" alt="React" class="project-image cms-image" />
               </div>
             </div>
             <div class="project-footer">
               <div class="tech-stack">
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                    alt="Java"
-                    class="tech-logo"
-                  />
-                  <span>Java</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                    alt="MySQL"
-                    class="tech-logo"
-                  />
-                  <span>MySQL</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                    alt="JDBC"
-                    class="tech-logo"
-                  />
-                  <span>JDBC</span>
-                </div>
-                <div class="tech-item">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                    alt="Swing"
-                    class="tech-logo"
-                  />
-                  <span>Swing</span>
-                </div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tech-logo" /><span>Java</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-logo" /><span>MySQL</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="JDBC" class="tech-logo" /><span>JDBC</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Swing" class="tech-logo" /><span>Swing</span></div>
               </div>
               <div class="project-actions">
-                <a href="#" class="action-btn demo-btn">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    ></path>
-                  </svg>
-                  Demo
-                </a>
-                <a href="#" class="action-btn github-btn">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                    ></path>
-                  </svg>
-                  GitHub
-                </a>
+                <a href="#" class="action-btn demo-btn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>Demo</a>
+                <a href="#" class="action-btn github-btn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>GitHub</a>
               </div>
             </div>
           </div>
@@ -3228,34 +2962,22 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
       <div class="container">
-        <div class="contact-card">
-          <h2 class="section-title">Contact Me</h2>
-          <div class="contact-icons">
-            <a href="https://github.com/kirtikour" class="contact-icon-btn" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/kirtikour" class="contact-icon-btn" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:kirtikour.bscsf22@iba-suk.edu.pk" class="contact-icon-btn" title="Gmail">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="tel:+923352787538" class="contact-icon-btn" title="Phone">
-              <i class="fas fa-phone"></i>
-            </a>
-            <a href="kirtikourkatariaCv.pdf" class="contact-icon-btn" download title="Download CV">
-              <i class="fas fa-file-download"></i>
-            </a>
+        <div class="contact-card" data-aos="zoom-in-up" data-aos-delay="200">
+          <h2 class="section-title" data-aos="fade-right" data-aos-delay="300">Contact Me</h2>
+          <div class="contact-icons" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://github.com/kirtikour" class="contact-icon-btn" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/kirtikour" class="contact-icon-btn" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:kirtikour.bscsf22@iba-suk.edu.pk" class="contact-icon-btn" title="Gmail"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+923352787538" class="contact-icon-btn" title="Phone"><i class="fas fa-phone"></i></a>
+            <a href="kirtikourkatariaCv.pdf" class="contact-icon-btn" download title="Download CV"><i class="fas fa-file-download"></i></a>
           </div>
-          <form class="contact-form-modern">
+          <form class="contact-form-modern" data-aos="fade-up" data-aos-delay="500">
             <input type="text" name="name" placeholder="Your name" required />
             <input type="email" name="email" placeholder="Your email" required />
             <textarea name="message" placeholder="Your message" rows="4" required></textarea>
-            <button type="submit" class="contact-submit-btn">
-              Submit <i class="fas fa-paper-plane"></i>
-            </button>
+            <button type="submit" class="contact-submit-btn">Submit <i class="fas fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
@@ -3413,6 +3135,16 @@
 
       // Initialize stars when page loads
       createStars();
+    </script>
+    <!-- 4. Add AOS JS CDN before closing body -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 900,
+        offset: 80,
+        easing: 'ease-in-out',
+      });
     </script>
   </body>
 </html>
